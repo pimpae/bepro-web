@@ -66,7 +66,57 @@ main h4{
   margin-bottom: 10px;
   color: #fff;
 }
-
+.borin h2{
+  color: #DE8B00;
+  text-align: center;
+} 
+.borin h1.text-black{
+  text-decoration: none;
+  color: #54595F !important;
+} 
+.form-bg{
+  background-color: var(--main-color);
+  padding: 15px 20px; 
+}
+.form-bg h4{ 
+  color: #fff;
+  text-align: start;
+}
+.form-check{
+  font-size: 18px !important;
+  color: #fff !important;
+  margin-bottom: 15px;
+}  
+.form-bg label{
+  font-size: 18px !important;
+  color: #fff !important;
+  margin-bottom: 10px;
+}
+.form-bg input{
+  font-size: 18px !important; 
+  margin-bottom: 15px;
+}
+.form-bg textarea{
+  font-size: 18px !important; 
+  margin-bottom: 15px;
+} 
+.form-bg .btn-danger{
+  background-color: #D41022;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+p{
+  font-size: 20px;
+  color: #9C9C9C;
+  margin-bottom: 5px;
+}
+p span{ 
+  color: var(--main-color);
+}
+.text-green{ 
+  color: var(--main-color);
+}
 
 
 /* 
