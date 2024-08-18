@@ -117,6 +117,10 @@ p span{
 .text-green{ 
   color: var(--main-color);
 }
+.vidc{
+  display: block;
+  margin: auto;
+}
 
 
 /* 
