@@ -9,6 +9,19 @@
   --contrast-color: #2b4b67;      /* Blue-Green */
   --highlight-color: #67b62b;     /* Bright Green */
   --muted-color: #2bb673cc;       /* Muted Main Color */
+
+
+  /* --main-color: #37220f;
+  --color-1: #4a2f12;
+  --color-2: #5e3b16;
+  --color-3: #714719;
+  --color-4: #85531d;
+  --color-5: #996020;
+  --color-6: #ad6c24;
+  --color-7: #c07928;
+  --color-8: #d4852b;
+  --color-9: #e8922f;
+  --color-10: #fc9f33; */
 }
 
 a{
@@ -121,7 +134,12 @@ p span{
   display: block;
   margin: auto;
 }
-
+.h3-hr{
+  color: var(--main-color);
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); 
+  font-size: 40px;
+  text-align: center;
+}
 
 /* 
 transition: .33s all ease-out;  
