@@ -139,6 +139,66 @@ p span{
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); 
   font-size: 40px;
   text-align: center;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.h3-hr::after{
+  content: "";
+  position: relative;
+  width: 50px;
+  height: 5px; 
+  display: block; 
+  margin: auto; 
+  bottom: -10px;
+  background-color: var(--main-color); 
+  border-radius: 3px;
+}
+.we-brand{
+  box-shadow: 0px 0px 0px 0px rgba(105, 36, 36, 0);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #E7E7E7;
+  min-height: 170px; 
+  transition: .33s all ease-out;    
+} 
+.we-brand img{
+  height: 155px;
+  width: 155px;
+  object-fit: scale-down;
+  padding: 10px;
+} 
+.contact-box{
+  min-height: 200px;
+  width: 100% !important;
+  box-shadow: 0px 35px 35px 0px rgba(0, 0, 0, 0.1); 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px 0px 0px 0px;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
+}
+.contact-box > .row > div{ 
+  padding: 50px 40px 0px 40px;
+}
+.contact-box h4{
+  text-align: left;
+  color: #1a1a1a; 
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase; 
+  position: relative;
+}
+.contact-box h4::after{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px; 
+  left: 0;
+  bottom: -35px;
+  margin-bottom: 40px;
+  background-color: var(--main-color); 
+  border-radius: 3px;
 }
 
 /* 
