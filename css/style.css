@@ -179,26 +179,47 @@ p span{
   border-radius: 0px 0px 20px 20px;
 }
 .contact-box > .row > div{ 
-  padding: 50px 40px 0px 40px;
+  padding: 50px 50px 0px 50px;
 }
 .contact-box h4{
   text-align: left;
   color: #1a1a1a; 
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   text-transform: uppercase; 
   position: relative;
+  margin-bottom: 20px;
 }
 .contact-box h4::after{
   content: "";
   position: absolute;
-  width: 50px;
-  height: 4px; 
+  width: 40px;
+  height: 3px; 
   left: 0;
-  bottom: -35px;
-  margin-bottom: 40px;
+  bottom: -5px;
   background-color: var(--main-color); 
   border-radius: 3px;
+}
+.contact-box h5{
+  text-align: left;
+  color: var(--main-color); 
+  font-size: 20px;  
+  font-weight: 500;
+  position: relative;
+  padding-left: 25px;
+}
+.contact-box h5 i{
+  position: absolute;
+  left: -4px;
+  font-size: 18px;
+}
+.contact-box p{
+  text-align: left;
+  color: #1a1a1a; 
+  font-size: 16px;   
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 25px;
 }
 
 /* 
