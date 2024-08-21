@@ -169,30 +169,30 @@
 			<h3 class="h3-hr">ทีมงานของเรา</h3>
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
-					<div class="row">
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+					<div class="row row-img">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
-						<div class="col-lg-3 col-6 mb-3">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images">
+						<div class="col-lg-3 col-6">
+							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
 						</div>
 					</div>
 				</div>
@@ -265,10 +265,27 @@
 		<br> 
 	</main> 
 
+
+	<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+		  	<div class="modal-content">
+				<div class="modal-body p-0">
+					<img src="" class="img-fluid" id="modalImage">
+				</div>
+		  	</div>
+		</div>
+	</div>
+	  
+
 	<script src="js/jquery.min.js"></script> 
 	<script src="js/popper.min.js" ></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
-  
+	<script>
+		function showImage(element) {
+		  var imageSrc = element.src;
+		  document.getElementById('modalImage').src = imageSrc;
+		}
+	</script>
 
 </body>
 </html>

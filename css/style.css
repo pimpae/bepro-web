@@ -218,7 +218,12 @@ p span{
   margin-bottom: 20px;
   padding-left: 25px;
 }
-
+.row-img div{
+  margin-bottom: 10px; 
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+  cursor: pointer;
+} 
 /* 
 transition: .33s all ease-out;  
 ######################################################################################################
@@ -228,7 +233,7 @@ transition: .33s all ease-out;
 @media only screen and (max-width: 1024px) { /* MOBILE */
   .mb-x{
     display: none !important;
-  }  
+  }   
 }
 @media only screen and (min-width: 1025px) { /* PC */
   .pc-x{
