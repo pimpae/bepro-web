@@ -223,7 +223,31 @@ p span{
   padding-right: 5px !important;
   padding-left: 5px !important;
   cursor: pointer;
+  transition: .33s all ease-out;  
 } 
+.row-img div img{
+  height: 200px;
+  object-fit: cover;
+} 
+.row-img div:hover img{
+  background-color: black;
+  opacity: .7;
+} 
+.modal-img #prevBtn{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  background-color: var(--main-color);
+}
+.modal-img #nextBtn{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  background-color: var(--main-color); 
+}
+.custom-modal-bg {
+  background-color: rgba(0, 0, 0, 0.65);  
+}
 /* 
 transition: .33s all ease-out;  
 ######################################################################################################

@@ -171,28 +171,28 @@
 				<div class="col-lg-8">
 					<div class="row row-img">
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/111.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="0">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/222.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="1">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/333.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="2">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/444.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="3">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/111.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="4">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/222.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="5">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/333.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="6">
 						</div>
 						<div class="col-lg-3 col-6">
-							<img src="images/S__7274516.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+							<img src="images/444.jpg" class="img-fluid m-auto d-block w-100" alt="images" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)" data-index="7">
 						</div>
 					</div>
 				</div>
@@ -264,28 +264,47 @@
 		<br>
 		<br> 
 	</main> 
+ 
 
-
-	<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-		  	<div class="modal-content">
-				<div class="modal-body p-0">
-					<img src="" class="img-fluid" id="modalImage">
-				</div>
-		  	</div>
+	<div class="modal modal-img fade custom-modal-bg" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-xl">
+			<div class="modal-content ">
+				<div class="modal-body text-center p-0">
+				<button class="btn" id="prevBtn" onclick="prevImage()">&#9664;</button>
+				<img src="" class="img-fluid" id="modalImage">
+				<button class="btn" id="nextBtn" onclick="nextImage()">&#9654;</button>
+				</div> 
+			</div>
 		</div>
-	</div>
+	  </div>
 	  
 
 	<script src="js/jquery.min.js"></script> 
 	<script src="js/popper.min.js" ></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script>
+		let currentIndex = 0;
+		const images = document.querySelectorAll('.img-fluid[data-bs-toggle="modal"]');
+	  
 		function showImage(element) {
-		  var imageSrc = element.src;
-		  document.getElementById('modalImage').src = imageSrc;
+		  currentIndex = parseInt(element.getAttribute('data-index'));
+		  updateModalImage();
+		}
+	  
+		function updateModalImage() {
+		  const modalImage = document.getElementById('modalImage');
+		  modalImage.src = images[currentIndex].src;
+		}
+	  
+		function nextImage() {
+		  currentIndex = (currentIndex + 1) % images.length;
+		  updateModalImage();
+		}
+	  
+		function prevImage() {
+		  currentIndex = (currentIndex - 1 + images.length) % images.length;
+		  updateModalImage();
 		}
 	</script>
-
 </body>
 </html>
